@@ -9,5 +9,5 @@
     private: false
   tasks: 
   - name: print the vars fro prompting
-    ansible.builting.debug:
+    ansible.builtin.debug:
       msg: "Hello, I have started the {{COURSE}}-Course, time period is:{{DURATION}}"
