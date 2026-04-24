@@ -1,0 +1,13 @@
+- name: pay-1
+  hosts: web
+  tasks:
+  - name: paly-1 task
+    ansible.builtin.debug:
+      msg: "Hell, this is from PALY-1"
+  
+- name: play-2
+  hosts: web
+  tasks: 
+  - name: Play-2 task
+    ansible.builtin.debug:
+      msg: "Hello, This is from Play-2"
