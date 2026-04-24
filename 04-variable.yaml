@@ -1,0 +1,9 @@
+- name: variables
+  hosts: web
+  vars:
+    COURSE: "DevOps"
+    DURATION: 120HRS
+  tasks:
+  - name: print the variables
+    ansible.builtin.debug:
+      msg: "Hello, I have started the {{COURSE}} - Course, time period is: {{DURATION}}"
