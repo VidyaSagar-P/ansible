@@ -1,0 +1,13 @@
+- name: vars from prompting
+  hosts: web
+  vars_prompt:
+  - name: COURSE
+    prompt: please enter the Course name
+    private: false
+  - name: DURATION
+    prompt: please enter the time period
+    private: false
+  tasks: 
+  - name: print the vars fro prompting
+    ansible.builting.debug:
+      msg: "Hello, I have started the {{COURSE}}-Course, time period is:{{DURATION}}"
