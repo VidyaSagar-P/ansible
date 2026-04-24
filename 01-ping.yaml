@@ -1,6 +1,6 @@
 - name: ping
-  hosts: local
-  connection: local
+  hosts: localhost
+  connection: localhost
   become: yes
   tasks:
   - name: ping the server
