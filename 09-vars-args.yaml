@@ -1,6 +1,6 @@
-- name: vars from prompting
+- name: vars from Args
   hosts: web
   tasks: 
-  - name: print the vars fro prompting
+  - name: print the vars fro args
     ansible.builtin.debug:
       msg: "Hello, I have started the {{COURSE}}-Course, time period is:{{DURATION}}"
