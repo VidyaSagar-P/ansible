@@ -1,0 +1,6 @@
+- name: vars from prompting
+  hosts: web
+  tasks: 
+  - name: print the vars fro prompting
+    ansible.builtin.debug:
+      msg: "Hello, I have started the {{COURSE}}-Course, time period is:{{DURATION}}"
