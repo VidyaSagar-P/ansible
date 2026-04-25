@@ -1,0 +1,13 @@
+- name: install nginx if RedHat
+  hosts: web
+  tasks:
+  - name: facts
+    ansible.builtin.debug:
+      msg: "facts {{ansible_facts}}"
+
+  - name: install nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: ansible_os_family == "RedHat"
+  
