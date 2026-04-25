@@ -1,5 +1,6 @@
 - name: install nginx if RedHat
   hosts: web
+  become: yes
   tasks:
   - name: facts
     ansible.builtin.debug:
