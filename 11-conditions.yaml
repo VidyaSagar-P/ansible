@@ -8,7 +8,7 @@
     ignore_errors: true
   
   - name: print the info
-    andible.builtin.debug:
+    ansible.builtin.debug:
       msg: "user info {{USER}}"
 
   # - name: create use if not exists
