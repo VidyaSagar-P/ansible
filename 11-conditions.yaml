@@ -11,8 +11,8 @@
     ansible.builtin.debug:
       msg: "user info {{USER}}"
 
-  # - name: create use if not exists
-  #   ansible.builtin.command: useradd doctor
-  #   when: 
+  - name: create use if not exists
+    ansible.builtin.command: useradd doctor
+    when: USER.rc != 0
 
 
