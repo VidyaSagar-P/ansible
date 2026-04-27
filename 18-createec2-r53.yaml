@@ -12,7 +12,7 @@
     instance_type: t3.small
 
   tasks:
-  - name: dependencies
+  - name: install python dependencies
     ansible.builtin.pip:
       name: "{{item}}"
       executable: pip3.9
