@@ -1,0 +1,23 @@
+- name: Create ec2 instances for DoctorAppointment project
+  hosts: local
+  connection: local
+  vars:
+    instaces:
+    - mysql
+    - backend
+    - frontend
+    ami_id: "ami-0220d79f3f480ecf5"
+    security_id: "sg-0143c6df8abb26414"
+    vpc_subnet_id: "subnet-0ebfcdb20a210d658"
+    instance_type: t3.small
+
+  tasks:
+  - name: create instances
+    amazon.aws.ec2_instance:
+      name: "{{item}}"
+      instance_type: "{{instance_type}}"
+      image_id: "{{ ami_id }}"
+      vpc_subnet_id: "{{ vpc_subnet_id }}"
+      security_group: "{{ sg-0143c6df8abb26414 }}"
+    loop: "{{ instaces }}"
+    register: ec2_instances
