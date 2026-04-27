@@ -29,3 +29,7 @@
       security_group: "{{ security_id }}"
     loop: "{{ instaces }}"
     register: ec2_instances
+
+  - name: print the instances
+    ansible.builtin.debug:
+      msg: "created instaces are {{ec2_instances}}"
